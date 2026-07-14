@@ -10,11 +10,11 @@ from flask import Flask, request, jsonify
 # Download NLTK resources (if not already downloaded, ensure they are available in your environment)
 try:
     nltk.data.find('corpora/stopwords')
-except LookupError: # Changed from nltk.downloader.DownloadError
+except LookupError:
     nltk.download('stopwords')
 try:
     nltk.data.find('tokenizers/punkt')
-except LookupError: # Changed from nltk.downloader.DownloadError
+except LookupError:
     nltk.download('punkt')
 
 # Initialize NLTK components
